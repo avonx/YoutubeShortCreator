@@ -12,7 +12,7 @@ Automate the creation of YouTube Shorts locally, simply by providing a video top
 After you finished installing Python, you can install `YoutubeShortCreator` by following the steps below:
 
 ```bash
-git clone https://github.com/avonx/YoutubeShortCreator.git
+git clone https://github.com/avonx/youtube_short.git
 cd YoutubeShortCreator
 
 # Install requirements

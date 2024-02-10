@@ -2,8 +2,11 @@
 
 Automate the creation of YouTube Shorts locally, simply by providing a video topic to talk about.
 
-[![ビデオの例](docs/thumbnail.png)](https://www.youtube.com/shorts/Eah3Pb9s2Kk "例を見る")
-
+<div style="text-align: center;">
+    <a href="https://www.youtube.com/shorts/Eah3Pb9s2Kk">
+        <img src="docs/thumbnail.png" width="500" alt="ビデオの例">
+    </a>
+</div>
 
 ## Installation 📥
 
@@ -12,7 +15,7 @@ Automate the creation of YouTube Shorts locally, simply by providing a video top
 After you finished installing Python, you can install `YoutubeShortCreator` by following the steps below:
 
 ```bash
-git clone https://github.com/avonx/youtube_short.git
+git clone https://github.com/avonx/YoutubeShortCreator.git
 cd YoutubeShortCreator
 
 # Install requirements

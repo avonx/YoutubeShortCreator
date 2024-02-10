@@ -71,10 +71,8 @@ if __name__ == "__main__":
     num_ideas = 5
 
     youtube = get_authenticated_service()
-    category = os.getenv(
-        "CATEGORY"
-    )  # YouTube category ID (e.g., "22" represents People & Blogs category)
-    privacyStatus = os.getenv("PRIVACY_STATUS")  # public, private, or unlisted
+    category = os.getenv("CATEGORY")
+    privacyStatus = os.getenv("PRIVACY_STATUS")
 
     ideas = generate_ideas(meta_topic, num_ideas)
     print(colored("[+] Generating ideas...", "yellow"))  # Progress message
@@ -84,15 +82,11 @@ if __name__ == "__main__":
     for idea in ideas["ideas"]:
         video_subject = idea
         output_file_path = f"./output/{video_subject}.mp4"
-        video_path, updated_clips = topic2video(
-            video_subject, num_clips, output_file_path
-        )
+        video_path, updated_clips = topic2video(video_subject, num_clips, output_file_path)
 
         description = updated_clips["description"]
         keywords = updated_clips["topic"]
         category = updated_clips["category"]
 
         title = updated_clips["title"]
-        upload_video(
-            youtube, video_path, title, description, category, keywords, privacyStatus
-        )
+        upload_video(youtube, video_path, title, description, category, keywords, privacyStatus)

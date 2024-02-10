@@ -1,7 +1,5 @@
 termcolor
 openai
-pytest
-black
 pydub
 requests
 google-api-python-client

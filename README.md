@@ -41,6 +41,18 @@ See [`.env.example`](.env.example) for the required environment variables.
 4. Wait for the video to be generated
 5. The video's location is `output/<タイトルは自動的に生成されます>.mp4`
 
+## **Setting Up Style-Bert-VITS2 API**
+
+To use Style-Bert-VITS2 for voice synthesis, follow these steps:
+
+1. Deploy **`Style-Bert-VITS2`** as an API server. Documentation [here](https://github.com/litagin02/Style-Bert-VITS2).
+2. In your **`.env`** file, specify the API endpoint:
+    
+    ```bash
+    TTS_API_URL=http://your-api-server-address/voice 
+    ```
+    
+3. Adjust parameters in **`src/text2voice.py`** as needed to match the API's requirements.
 
 ## Automatic YouTube Uploading 🎥
 
@@ -52,9 +64,9 @@ To use this feature, you need to:
 4. Create an `OAuth consent screen` and add yourself (the account of your YouTube channel) to the testers.
 5. Enable the following scopes in the `OAuth consent screen` for your project:
 
-```
-'https://www.googleapis.com/auth/youtube.upload'
-```
+    ```
+    'https://www.googleapis.com/auth/youtube.upload'
+    ```
 
 ## License 📝
 

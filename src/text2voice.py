@@ -4,6 +4,8 @@ import io
 import uuid
 from pathlib import Path
 from termcolor import colored
+import os
+from dotenv import load_dotenv
 
 # tempフォルダのパスを定義（存在しない場合は作成）
 temp_folder = Path("./temp")
@@ -62,6 +64,9 @@ def process_and_combine_audio(text: str) -> AudioSegment:
     return combined_audio
 
 
+# Load environment variables from .env file
+load_dotenv()
+
 def get_tts_audio(text: str) -> bytes:
     """
     Get text-to-speech audio for the given text.
@@ -72,7 +77,7 @@ def get_tts_audio(text: str) -> bytes:
     Returns:
         bytes: The audio content in bytes if successful, None otherwise.
     """
-    url = "https://igeb37tgif2guh-5000.proxy.runpod.net/voice"
+    url = os.getenv("TTS_API_URL")  # Read URL from environment variable
     params = {
         "text": text,
         "encoding": "utf-8",

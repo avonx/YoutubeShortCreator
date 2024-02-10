@@ -6,8 +6,8 @@ from googleapiclient.http import MediaFileUpload
 from google.auth.transport.requests import Request
 from termcolor import colored
 from dotenv import load_dotenv
-from generate_video import topic2video
-from generate_ideas import generate_ideas
+from src.generate_video import topic2video
+from src.generate_ideas import generate_ideas
 
 # Load environment variables from .env file
 load_dotenv()

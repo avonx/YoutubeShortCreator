@@ -1,10 +1,10 @@
 from pathlib import Path
 from termcolor import colored
 
-from generate_ideas import generate_ideas
-from topic2text import generate_script
-from text2voice import generate_audio_for_clips
-from voice2video import process_json_data, create_combined_video_from_clips
+from src.generate_ideas import generate_ideas
+from src.topic2text import generate_script
+from src.text2voice import generate_audio_for_clips
+from src.voice2video import process_json_data, create_combined_video_from_clips
 
 
 def topic2video(video_subject, num_clips, output_file_path):

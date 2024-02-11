@@ -39,7 +39,7 @@ def topic2video(video_subject, num_clips, output_file_path):
 
 if __name__ == "__main__":
     # どのような動画を作成するか大まかに指定
-    meta_topic = "科学に関する話題を具体的に。"
+    meta_topic = "自転車で走るの気持ちい場所"
     # 何本の動画アイデアを生成するか指定
     num_ideas = 3
     ideas = generate_ideas(meta_topic, num_ideas)
